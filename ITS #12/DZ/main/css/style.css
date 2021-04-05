@@ -1,0 +1,130 @@
+body {
+	background: #f4f4f4;
+	margin: 0;
+}
+
+h1 {
+	margin: 30px 0 0;
+	padding: 0;
+}
+
+h2 {
+	color: rgba(31,31,31,.5);
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1140px;
+	min-height: 500px;
+	margin: 0 auto;
+	padding: 30px;
+	background: #f9f9f9;
+}
+
+.content {
+	margin: 10px;
+	float: left;
+	width: 650px;
+}
+
+.navi {
+	background: #1f1f1f;
+	width: 100%;
+	min-height: 10px;
+	padding: 5px;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+
+.navi-link {
+	display: inline;
+	text-decoration: none;
+  color: #fff;
+	font-size: 28px;
+	padding: 10px;
+}
+
+.navi-link:hover{
+	background: #1f1f1f;
+	color: #f60;
+}
+
+.big-pic{
+	margin: 30px 30px 0 0;
+	float: left;
+}
+
+
+.color-blue {
+	color: #342f90;
+}
+
+.color-silver {
+	color: rgba(31,31,31,.5);
+}
+
+table td {
+	padding: 10px 20px 10px 0;
+}
+
+table td span {
+	color: #000;
+}
+
+
+.sidebar {
+	float: left;
+	width: 200px;
+	padding-top: 30px;
+}
+
+.sidebar ul {
+	padding-left: 10px;
+}
+
+.sidebar li {
+	list-style: none;
+	color: #342f90;
+}
+
+.sidebar img {
+	margin: 0 auto;
+	width: 49px;
+	display: block;
+}
+
+.biography {
+	padding: 10px;
+}
+
+.galery {
+	text-align: center;
+}
+
+.galery img {
+	margin: 10px;
+	width: 320px;
+	height: 430px;
+}
+
+
+.footer{
+	background: black;
+	min-height: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 5px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	color: silver;
+	clear: both;
+}
+
+.pribilskiy {
+	display: inline;
+	color: silver;
+	text-decoration: none;
+	padding: 10px;
+}

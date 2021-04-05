@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skill learning JavaScript functions</title>
+</head>
+<body>
+	<h1 id="title">Greet!</h1>
+	<button id="btn-1" onclick="handler1()">You are welcome!</button>
+	<button id="btn-2">Try again!</button>
+	<script>
+		let name = prompt("Your name?")
+		function handler1() {
+			document.getElementById('title').innerHTML = `user ${name}, was created`
+			alert('Hello!')
+		}
+
+		function handler2() {
+			document.getElementById('title').innerHTML = `user ${name}, was greated!`
+			alert('Buy-buy!')
+		}
+
+		const b2 = document.getElementById('btn-2')
+		b2.addEventListener('click', handler2)
+	</script>
+</body>
+</html>

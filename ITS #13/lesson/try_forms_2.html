@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Try forms 2</title>
+</head>
+<body>
+	<form>
+		<label>
+			Age:
+			<input type="text" name="age">
+		</label><br>
+		Geender:
+		<input id="famele" type="radio" name="gender" value="f">
+		<label for="famele">Famale</label>
+		<input id="male" type="radio" name="gender" value="m">
+		<label for="male">Male</label>
+	</form>
+
+	<form>
+		<fieldset>
+			<legend>Contact details</legend>
+			<label>Email: <br>
+				<input type="text" name="email">
+			</label><br>
+			<label>Mobile: <br>
+				<input type="text" name="mobile">
+			</label><br>
+			<label>Additional mobile: <br>
+				<input type="text" name="additional_mobile">
+			</label>
+		</fieldset>
+	</form>
+
+	<form>
+		<label for="username">Username:</label>
+		<input id="username" type="text" name="username" required="required">
+		<label for="password">Password:</label>
+		<input id="password" type="password" name="password" required="required">
+		<input type="submit" value="Submit">
+	</form>
+
+	<form>
+		<label for="some_date"> Departure date:</label>
+		<input id="some_date" type="date" name="some_date">
+		<input type="submit" value="Submit">
+	</form>
+
+	<form>
+		<p>Search:</p>
+		<input type="search" name="search" placeholder="Enter keyword">
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

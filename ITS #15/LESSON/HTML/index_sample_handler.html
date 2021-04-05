@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample with handler</title>
+    <style type="text/css">
+    	body {
+    		background: #eee;
+    	}
+    	h1 {
+    		color: red;
+    	}
+    	.my-form {
+            background: salmon;
+            border: 5px solid black;
+            border-radius: 20px;
+            width: 600px;
+            padding: 20px;
+    	}
+    	#btn-1 {
+            font-size: 30px;
+            padding: 20px;
+        }
+        #my-number {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+	<form class="my-form">
+        <input id="my-number" type="number" name="10"><br><br>
+        <input id="btn-1" type="button" value="SUBMIT">
+    </form>
+
+    <div id="my-div" class="my-form">
+        
+    </div>
+    <script type="text/javascript">
+        let myDiv = document.getElementById('my-div')
+        let b1 = document.getElementById('btn-1')
+        b1.addEventListener('click', handler1)
+        function handler1() {
+            let sum = 0
+            myDiv.innerHTML = ''
+            const numberIn = Number(document.getElementById('my-number').value)
+            for (let i = 0; i < numberIn; i++) {
+                let line = `<h2>i = ${i}</h2>`
+                myDiv.innerHTML += line
+                sum += i
+            }
+            myDiv.innerHTML += "<h1> sum = " + sum.toString() + "</h1>"
+        }
+    </script>
+</body>
+</html>

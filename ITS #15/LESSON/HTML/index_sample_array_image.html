@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample array images</title>
+    <style type="text/css">
+    	body {
+    		background: #eee;
+    	}
+    	h1 {
+    		color: red;
+    	}
+    	button {
+    		padding: 20px;
+    		font-size: 22px;
+    	}
+    	.legend {
+    		width: 300px;
+    		height: 200px;
+    		margin: 40px;
+    		display: inline-block;
+    	}
+    </style>
+</head>
+<body>
+	<h1 id="title">This is header!</h1>
+	<script type="text/javascript">
+		let isConfirmed = confirm('Some Picture?');
+		const filenames = ['pika.jpg', 'duck.jpg']
+		let filename = ''
+		if (isConfirmed) {
+			document.getElementById('title').innerHTML = 'Here you are!'
+			filename = filenames[0]
+		} else {
+			document.getElementById('title').innerHTML = 'Not so easy!'
+			filename = filenames[1]
+		}
+
+		for (let i = 0; i < 20; i++)
+			document.writeln(`<img class='legend' src='${filename}'>`)
+	</script>
+</body>
+</html>

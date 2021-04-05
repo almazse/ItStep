@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 7th samle</title>
+    <style>
+        #flip {
+            padding: 10px;
+            text-align: center;
+            background-color: tomato;
+            border: 2px solid black;
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        #panel {
+            width: 400px;
+            display: none;
+            color: darkblue;
+            border: 2px solid black;
+            box-sizing: border-box;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">Click here to slide panel!</div>
+    <div id="panel">Hello JavaScript!</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#flip').hover(function() {
+                $('#panel').slideToggle('slow');
+            });
+        });
+    </script>
+</body>
+</html>

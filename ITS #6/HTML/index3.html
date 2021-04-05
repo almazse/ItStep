@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+          background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Пробуем JavaScript</h1>
+    <ol>
+      <li>Выберем один из вариантов действий</li>
+      <li>Введем значение в окне для ввода</li>
+      <li>Создадим переменную</li>
+      <li>Выведем всплывающее окно</li>
+      <li>Вывод в консоль</li>
+    </ol>
+
+    <script src="js/script777.js"></script>
+    <script>
+        let choice = confirm('Хотите ввести имя?');
+        let message;
+        if ( choice ) {
+            let name = prompt('Введите имя:');
+            message = 'Привет, дорогой ' + name + '!';
+        } else {
+            message = "Ну как хотите...";
+        }
+        alert(message);
+        console.log('MESSAGE: ' + message);
+    </script>
+    </body>
+</html>

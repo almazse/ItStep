@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery third sample</title>
+    <style>
+        #bell {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            width: 100px;
+            height: 100px;
+            background: url('img/bell.png');
+            background-size: 100px 100px;
+        }
+
+        .mydiv {
+            margin: 20px;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: black;
+            background-color: silver;
+            min-height: 100px;
+            padding-top: 30px;
+            box-sizing: border-box;
+        }
+
+        #bell:hover {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0% {transform: translate(1px, 1px) rotate(0deg);}
+            10% {transform: translate(-1px, -2px) rotate(-3deg);}
+            20% {transform: translate(-3px, 0px) rotate(3deg);}
+            30% {transform: translate(3px, 2px) rotate(0deg);}
+            40% {transform: translate(1px, -1px) rotate(3deg);}
+            50% {transform: translate(-1px, 2px) rotate(-3deg);}
+            60% {transform: translate(-3px, 1px) rotate(-3deg);}
+            70% {transform: translate(3px, 1px) rotate(0deg);}
+            80% {transform: translate(-1px, -1px) rotate(3deg);}
+            90% {transform: translate(1px, 2px) rotate(0deg);}
+            100% {transform: translate(1px, -2px) rotate(-3deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv">Black Text #1</div>
+    <div class="mydiv">Black Text #2</div>
+    <div class="mydiv">Black Text #3</div>
+    <div class="mydiv">Black Text #4</div>
+
+    <div id="bell"></div>
+
+    <button id="btn" style="font-size: 30px; padding: 10px; background-color: gold; margin: 30px;">CONSOLE</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let counter = 0;
+        let bell_ring = function () {
+            let r = parseInt($('bell').css('right'));
+            for (let i=0; i < 5; i++) {
+                $('#bell').animate({right: r-5}, 10);
+                $('#bell').animate({right: r+5}, 10);
+            }
+            $('#bell').animate({right: r}, 10);
+
+            $('.mydiv').click(function() {
+                $(this).css({fontFamily: 'Courier', color: 'white', backgroudColor: 'black'}).html('White text inside!')
+                bell_ring()
+            });
+
+            $('#btn').click(function() {
+                alert('1');
+                
+            });
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            border:0;
+            margin:0;
+            display: flex;
+            justify-content: center;
+        }
+        .traffic-light-arrow, .traffic-light {
+            background-color: #000;
+            border: 3px solid slategray;
+        }
+        .traffic-light-arrow {
+            align-self: flex-end;
+        }
+        .red, .yellow, .green, .arrow {
+            width: 200px;
+            height: 200px;
+            border: 3px solid slategray;
+            box-sizing: border-box;
+            border-radius: 100px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="traffic-light-arrow">
+        <div class="arrow"></div>
+    </div>
+    <div class="traffic-light">
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+    </div>
+
+    <script type='text/javascript'>
+        window.onload = function() {
+            
+        const red = document.querySelector(".red")
+        const yellow = document.querySelector(".yellow")
+        const green = document.querySelector(".green")
+        const arrow = document.querySelector(".arrow")
+
+        function onRed() {red.style.backgroundColor = "red";}
+        function onYellow() {yellow.style.backgroundColor = "yellow";}
+        function onGreen() {green.style.backgroundColor = "green";}
+
+        function offRed() {red.style.backgroundColor = "#000";}
+        function offYellow() {yellow.style.backgroundColor = "#000";}
+        function offGreen() {green.style.backgroundColor = "#000";}
+
+        function onTrafficLight() {
+            setTimeout(onRed, 0)
+            setTimeout(onYellow, 1500)
+            setTimeout(offYellow, 2500)
+            setTimeout(offRed, 2500)
+            setTimeout(onGreen, 2500)
+            setTimeout(offGreen, 4000)
+            setTimeout(onGreen, 4400)
+            setTimeout(offGreen, 4800)
+            setTimeout(onGreen, 5200)
+            setTimeout(offGreen, 5600)
+            setTimeout(onGreen, 6000)
+            setTimeout(offGreen, 6400)
+            setTimeout(onYellow, 6800)
+            setTimeout(offYellow, 7800)
+        }
+
+        onTrafficLight() 
+        setInterval(onTrafficLight, 7800)
+
+        function onTrafficLightArrow() {arrow.style.background = "url('arrow.png') no-repeat center";}
+        function offTrafficLightArrow() {arrow.style.background = "";}
+
+        setInterval(onTrafficLightArrow, 15600)
+        setInterval(offTrafficLightArrow, 31200)
+        
+    }
+    </script>
+</body>
+</html>

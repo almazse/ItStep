@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First sample</title>
+    <style type="text/css">
+    	body {
+    		background: #000;
+    	}
+    	h1 {
+    		color: gold;
+    	}
+    	h2 {
+    		color: red;
+    	}
+    </style>
+</head>
+<body>
+	<script type="text/javascript">
+		let isConfirmed = confirm('Do you want to convert temperature');
+		if (isConfirmed) {
+			let celciusTemperature = Number(prompt('Enter temperature in celcius'));
+			if (isNaN(celciusTemperature)) {
+				document.writeln('<h2>Not correct!</h2>')
+			} else {
+				const farenheitTemperature = 9 / 5 * celciusTemperature + 32
+				document.writeln('<h1>You entered ' + celciusTemperature + '<sup>o</sup> celsius</h1>')
+				document.writeln('<h1>It is ' + farenheitTemperature + '<sup>o</sup> farinheit</h1>')
+			}
+		} else {
+			document.writeln('<h1>Best wishes!</h1>')
+		}
+	</script>
+</body>
+</html>

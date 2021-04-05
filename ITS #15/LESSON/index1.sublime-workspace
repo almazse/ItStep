@@ -1,0 +1,377 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"my",
+				"myDiv"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"fi",
+				"filenames"
+			],
+			[
+				"is",
+				"isConfirmed"
+			],
+			[
+				"s",
+				"script\tTag"
+			],
+			[
+				"inline",
+				"inline-block\tdisplay"
+			],
+			[
+				"d",
+				"display\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"han",
+				"handler2"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"fun",
+				"functions"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"su",
+				"summAll"
+			],
+			[
+				"co",
+				"const"
+			],
+			[
+				"g",
+				"greet2"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"ce",
+				"celciusTemperature"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"sa",
+				"seamless"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"fo",
+				"font-family\tproperty"
+			],
+			[
+				"f",
+				"flex-start\talign-items"
+			],
+			[
+				"alig",
+				"align-items\tproperty"
+			],
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"fle",
+				"flex-direction\tproperty"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"te",
+				"textarea\tTag"
+			],
+			[
+				"he",
+				"hear_about"
+			],
+			[
+				"l",
+				"label\tTag"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"S",
+				"Search"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"se",
+				"select\tTag"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"a",
+				"action\tAttr"
+			],
+			[
+				"pa",
+				"padding\tproperty"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"w",
+				"width\tproperty"
+			],
+			[
+				"di",
+				"div\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/user.ITSTEP.000/PycharmProjects/15/app_array.js",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/15/index_arrays_sample.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/15/index2.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/15/index1.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/15/app1.js",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/15/index.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/15/first_samle.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/extra_html/index.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/extra_html/index_block_inline_elements.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/div_flexbox/index.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/div_flexbox/index_horizont.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/div_flexbox/index2.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/div_flexbox/index2_vertical.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/div_flexbox/index2_horizontal.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/div_flexbox/index_flex.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/div_flexbox/index_direction_column.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/div_flexbox/flex_directoin.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/my_form.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/Forms_example.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/try_forms_2.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0016/try_forms.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0015/venv/main/css/style.css",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0015/venv/main/index.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0015/venv/index4.html",
+		"/C/Users/user.ITSTEP.000/PycharmProjects/b01-0015/venv/main.css"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index1.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

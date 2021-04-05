@@ -1,0 +1,20 @@
+body {
+  background-color: bisque;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  margin: 20px;
+  box-shadow: 0 0 10px black;
+}
+
+.big-img {
+  width: 50%;
+}
+
+.small-img {
+  width: 25%;
+}

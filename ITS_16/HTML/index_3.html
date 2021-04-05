@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 6th samle</title>
+    <style>
+        .mydiv {
+            width: 200px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .mydiv:nth-last-of-type(1) {
+            background-color: salmon;
+        }
+        .mydiv:nth-last-of-type(2) {
+            background-color: lightgreen;
+        }
+        .mydiv:nth-last-of-type(3) {
+            background-color: lightblue;
+        }
+        .mydiv:nth-last-of-type(4) {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv">Black Text #1</div>
+    <div class="mydiv">Black Text #2</div>
+    <div class="mydiv">Black Text #3</div>
+    <div class="mydiv">Black Text #4</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.mydiv').dblclick(function() {
+                $(this).hide();
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .underlined {
+            text-decoration: underline;
+        }
+        #special {
+            color: green;
+			text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="red">This is h1</h1>
+    <h1 class="underlined">This is h1</h1>
+    <h1 class="red underlined">This is h1</h1>
+    <hr>
+    <h1 id="special" class="underlined">This is special h1</h1>
+    <h1 id="very-special" class="underlined">This is very special h1</h1>
+
+    <script>
+        let very_special = document.getElementById('very-special');
+		very_special.style.backgroundColor = 'pink';
+		very_special.style.textAlign = 'center';
+        console.log(very_special.style);
+    </script>
+</body>
+</html>

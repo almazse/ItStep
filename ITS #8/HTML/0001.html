@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Arrays</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        let s = 0;
+        for (let i = 0; i < arr.length; i++) {
+            console.log(i, arr[i]);
+            document.writeln(`<p>a[${i}] = ${arr[i]}</p>`);
+            s = s + arr[i];
+        }
+        document.writeln(`S = ${s}`);
+        document.writeln("<hr>");
+
+        arr.forEach(function(e, i) {
+            document.writeln(`<p>a[${i}] = ${e}</p>`);
+        });
+
+        document.writeln("<hr>");
+
+        arr.forEach((e, i) => {
+            document.writeln(`<p>a[${i}] = ${e}</p>`);
+        });
+
+        let squares = arr.map((e) => e * e);
+        console.log(squares);
+    </script>
+</body>
+</html>

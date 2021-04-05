@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery basies</title>
+</head>
+<body>
+    <h1 id="title1"></h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("<h1 id='title2'></h1>").appendTo(document.body);
+        $("<button id='btn1'>BUTTON 1</button>").appendTo(document.body);
+        $("<button id='btn2'>BUTTON 2</button>").appendTo(document.body);
+
+        document.getElementById('title1').innerHTML = "This is Title No1";
+        document.getElementById('title1').style.color = "red";
+        document.getElementById('title1').style.textAlign = "left";
+
+        $("#title2").html("This is Title No2").css('color', 'green').css('text-align', 'center');
+
+        document.getElementById('btn1').addEventListener('click', function() {
+            alert('Button 1')
+        });
+
+        $('#btn2').click(function () {
+            $('#title2').html('This is Title 2').css('text-align', 'left')
+        });
+    </script>
+</body>
+</html>

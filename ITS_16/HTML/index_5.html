@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 7th samle</title>
+    <style>
+        #div-1 {
+            background-color: lightgreen;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 10px;
+            top: 200px;
+        }
+
+        #div-2 {
+            background-color: tomato;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 200px;
+        }
+
+        button {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div-1"></div>
+    <div id="div-2"></div>
+    <button id="btn">Click</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#btn').click(function() {
+                // $('div').css({backgroundColor: 'blue'});
+                // $('div').animate({opacity: '0.1'}, 2000);
+                // $('div').animate({opacity: '1'}, 2000);
+                // $('div').animate({top: '100px'}, 2000);
+                // $('div').animate({left: '100%'}, 2000);
+
+                // $('div').slideUp(1000);
+                // $('div').slideDown(1000);
+
+                $('#div-1').animate({top: '100px'}, 2000);
+                $('#div-1').animate({left: '500px'}, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

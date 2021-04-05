@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example fixed</title>
+    <style type="text/css">
+      body {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      #content {
+        overflow: auto;
+      }
+
+      #nav, #future, #footer {
+        margin: 1%;
+      }
+
+      .column1, .column2, .column3 {
+        background-color: #efefef;
+        width: 31.3%;
+        float: left;
+        margin: 1%;
+      }
+
+      .column3 {
+        margin-right: 0px;
+      }
+
+      li {
+        display: inline;
+        padding: 0.5em 0;
+      }
+
+      #future, .article {
+        height: 10em;
+        margin-bottom: 1em;
+        background-color: #efefef;
+      }
+    </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Logo</h1>
+    <div id="nav">
+      <ul>
+        <li><a href="#">123</a></li>
+        <li><a href="#">545</a></li>
+        <li><a href="#">7868</a></li>
+        <li><a href="#">678967</a></li>
+        <li><a href="#">678678</a></li>
+        <li><a href="#">9890789</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="content">
+    <div id="future">
+      <p>Feature</p>
+    </div>
+    <div class="article column1">
+      <p>Column One</p>
+    </div>
+    <div class="article column2">
+      <p>Column Two</p>
+    </div>
+    <div class="article column3">
+      <p>Column Three</p>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>&copy: Copyright 2021</p>
+  </div>
+</body>
+</html>

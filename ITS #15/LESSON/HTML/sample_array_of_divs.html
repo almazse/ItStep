@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ARRAY OF DIVS</title>
+	<style type="text/css">
+		.my-div {
+			background: grey;
+			width: 300px;
+			height: 200px;
+			margin: 50px;
+			border: 5px solid black;
+		}
+		.pink {
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="my-div pink"></div>
+	<div class="my-div"></div>
+	<div class="my-div"></div>
+	<div class="my-div"></div>
+
+	<script type="text/javascript">
+		const divs = document.querySelectorAll('.my-div')
+		let current = 0
+
+		function nextDiv() {
+			divs[current].className = 'my-div';
+			current++;
+			current = current % divs.lenght
+			divs[current].className = 'my-div pink'
+		}
+
+		setInterval(nextDiv, 500)
+	</script>
+</body>
+</html>

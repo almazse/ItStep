@@ -1,0 +1,31 @@
+{
+   "name": "John Wick",
+   "born": 1968,
+   "guns": [
+      {
+         "mark": "Beretta",
+         "type": "pistol",
+         "bullets": 14
+      },
+      {
+         "mark": "AK-74",
+         "type": "assault rifle",
+         "bullets": 30
+      },
+      {
+         "mark": "Makarov",
+         "type": "pistol",
+         "bullets": 8
+      },
+      {
+         "mark": "Uzi",
+         "type": "assault rifle",
+         "bullets": 22
+      },
+      {
+         "mark": "Maxim",
+         "type": "machine gun",
+         "bullets": 120
+      }
+   ]
+}

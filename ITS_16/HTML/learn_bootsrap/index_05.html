@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootsrap third</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .mybutton {
+            width: 170px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="a-inline-block align-top" style="height:50px; width:50px;" src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Main</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Buttons</h1>
+    <br>
+    <div class="container" style="padding: 10px; background-color: lightgrey;">
+        <button type="button" class="btn btn-primary">Primaty</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-dark mybutton">Dark</button>
+    </div>
+
+    <br><br>
+
+    <div class="container" style="padding: 10px; background-color: lightgrey;">
+        <button type="button" class="btn btn-outline-primary">Primaty</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-dark mybutton">Dark</button>
+    </div>
+
+    <br><br>
+
+    <div class="container btn-group" role="group" aria-label="Basic">
+        <button type="button" class="btn btn-outline-primary mybutton">Left</button>
+        <button type="button" class="btn btn-outline-primary mybutton">Middle</button>
+        <button type="button" class="btn btn-outline-primary mybutton">Right</button>
+    </div>
+
+</body>
+</html>
