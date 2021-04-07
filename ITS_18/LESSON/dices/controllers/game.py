@@ -8,7 +8,7 @@ class DiceGame:
     def __init__(self, number_of_players):
         self._number_of_players = number_of_players
         self.view = ConsoleView()
-        self._players = self.create_players()
+        self._players = self._create_players()
         self.dice = Dice()
 
     def start(self):
@@ -30,7 +30,7 @@ class DiceGame:
         self.view.winner_game_message(winner._name)
 
     def _is_enough(self):
-        return any([player._score == 0 for player in self._players])
+        return any([player._score <= 0 for player in self._players])
 
     def _count_players(self, win_number):
         for player in self._players:
@@ -44,7 +44,7 @@ class DiceGame:
         for player in self._players:
             money = self.view.get_bet_money_by_player(player._name)
             number = self.view.get_bet_value_by_player(player._name)
-            if money <= player._score:
+            if money <= player._score and money > 0:
                 player.set_money(money)
             else:
                 player.set_money(player._score)
@@ -53,7 +53,7 @@ class DiceGame:
             else:
                 player.set_number(6)
 
-    def create_players(self):
+    def _create_players(self):
         players = []
         for i in range(self._number_of_players):
             name = self.view.get_player_name(i+1)
