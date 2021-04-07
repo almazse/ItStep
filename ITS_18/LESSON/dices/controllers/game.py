@@ -6,9 +6,9 @@ from ITS_18.LESSON.dices.models.player import Player
 class DiceGame:
 
     def __init__(self, number_of_players):
-        self._players = self.create_players()
         self._number_of_players = number_of_players
         self.view = ConsoleView()
+        self._players = self.create_players()
         self.dice = Dice()
 
     def start(self):
@@ -30,7 +30,7 @@ class DiceGame:
         self.view.winner_game_message(winner._name)
 
     def _is_enough(self):
-        return any([player._score for player in self._players])
+        return any([player._score == 0 for player in self._players])
 
     def _count_players(self, win_number):
         for player in self._players:
@@ -56,6 +56,6 @@ class DiceGame:
     def create_players(self):
         players = []
         for i in range(self._number_of_players):
-            name = self.view.get_player_name(i)
+            name = self.view.get_player_name(i+1)
             players.append(Player(name=name, score=100))
         return players
