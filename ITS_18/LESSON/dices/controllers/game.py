@@ -1,4 +1,4 @@
-from ITS_18.LESSON.dices.views.view import ConsoleView
+from ITS_18.LESSON.dices.views.console_view import ConsoleView
 from ITS_18.LESSON.dices.models.dice import Dice
 from ITS_18.LESSON.dices.models.player import Player
 

@@ -1,4 +1,7 @@
-class ConsoleView:
+from .base_view import BaseView
+
+
+class ConsoleView(BaseView):
 
     @staticmethod
     def greet_the_game():
