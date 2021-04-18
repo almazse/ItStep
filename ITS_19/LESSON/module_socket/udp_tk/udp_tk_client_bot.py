@@ -16,6 +16,6 @@ for _ in range(100):
 
     s1 = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     print(message)
-    s1.sendto(message.encode('utf-8'), ('localhost', 8354))
+    s1.sendto(message.encode('utf-8'), ('127.0.0.1', 8300))
 
 

@@ -4,10 +4,10 @@ import json
 
 
 def start_server():
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind(('localhost', 8354))
     while True:
         try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.bind(('127.0.0.1', 8300))
             result = s.recv(1024)
             print(f'message from: {result.decode("utf-8")}')
             dict_from_msg = json.loads(result.decode('utf-8'))
