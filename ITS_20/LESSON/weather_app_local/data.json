@@ -1,0 +1,12 @@
+{
+  "country": {
+    "city": {
+      "monday": "sunny",
+      "tuesday": "sunny",
+      "wednesday": "sunny",
+      "thursday": "clouds",
+      "friday": "rain",
+      "saturday": "sunny",
+    },
+  }
+}
