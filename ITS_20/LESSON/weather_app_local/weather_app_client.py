@@ -1,4 +1,5 @@
 import tkinter as tk
+from threading import Thread
 import socket
 import json
 
@@ -10,9 +11,9 @@ class TkWindowClient:
         self.root.minsize(400, 800)
         self._create_labels()
         self._create_entries()
-        self.send_button = tk.Button(self.root, text="SEND", command=send_func, font="Victor 14")
+        self._send_outer_func = send_func
+        self.send_button = tk.Button(self.root, text="SEND", command=self.send, font="Victor 14")
         self.send_button.grid(row=3, column=0, columnspan=2, padx=10, pady=10)
-        self.root.mainloop()
 
     def _create_labels(self):
         tk.Label(self.root, text="Get weather", font="Victor 21") \
@@ -29,6 +30,9 @@ class TkWindowClient:
         self.city_entry = tk.Entry(self.root, width=30, font="Victor 14")
         self.city_entry.grid(row=2, column=1, padx=10, pady=10)
 
+    def send(self):
+        self._send_outer_func(self.data_to_send)
+
     @property
     def data_to_send(self):
         return {
@@ -37,10 +41,10 @@ class TkWindowClient:
         }
 
     def draw_results(self, result: dict):
-        if "error" in result:
-            self._draw_error_label(result['message'])
+        if result.get("errors"):
+            self._draw_error_label(result['errors'][0])
         else:
-            self._draw_weather_result(result)
+            self._draw_weather_result(result['date'])
 
     def _draw_weather_result(self, weather_data: dict):
         row = 4
@@ -59,8 +63,11 @@ class TkWindowClient:
 class WeatherClient:
     def __init__(self):
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.tk_window = TkWindowClient(self.send_to_server())
         self.server = ('localhost', 8300)
+        self.socket.bind(('', 8300))
+        self.tk_window = TkWindowClient(self.send_to_server)
+        self.thread = Thread(target=self.read_socket)
+        self.thread.start()
 
     def read_socket(self):
         while True:
@@ -71,10 +78,11 @@ class WeatherClient:
             except KeyboardInterrupt:
                 break
 
-    def send_to_server(self):
-        data_to_send = json.dumps(self.tk_window.data_to_send)
+    def send_to_server(self, data):
+        data_to_send = json.dumps(data)
         self.socket.sendto(data_to_send.encode('utf-8'), self.server)
 
 
 if __name__ == '__main__':
     weather_app = WeatherClient()
+    weather_app.tk_window.root.mainloop()
