@@ -6,6 +6,13 @@ class Person:
     def __init__(self, name='no name', age=0):
         self._name = name
         self.__age = age
+        self.__address = 'n/a'
+
+    def set_address(self, addr):
+        self.__address = addr
+
+    def address(self):
+        return self.__address
 
     def set_age(self, a):
         self.__age = a
@@ -32,3 +39,4 @@ class Person:
         print('----------------------')
         print(f'| My name is {self._name}')
         print(f'| I am {self.__age}')
+        print(f'| I leave in {self.__address}')
