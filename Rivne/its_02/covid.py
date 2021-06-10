@@ -35,4 +35,4 @@ def by_new_confirmed_key(covid19):
     return covid19['NewConfirmed']
 
 
-covid19 = sorted(covid19, key=by_new_confirmed_key())
+covid19 = sorted(covid19, key=by_new_confirmed_key)
