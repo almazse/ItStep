@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <h2>Contact</h2>
+{% for message in messages %}
+  <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+      {{ message }}
+  </div>
+{% endfor %}
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Send</button>
+  </form>
+{% if messages %}
+
+
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,50 @@
+body {
+    background: #fff;
+    color: #212529 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #212529 !important;
+}
+
+#header {
+    background-color: #212529;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #fff;
+    border-bottom: 1px solid #212529;
+    font-weight: bold;
+}
+
+a.section:link, a.section:visited, a:link, a:visited {
+    color: #212529;
+}
+
+a:focus, a:hover {
+    color: #0d6efd !important;
+}
+
+.dashboard .module table td a {
+    color: #212529;
+}
+
+#content-related {
+    background: #f8f9fa;
+}
+
+tr:nth-child(odd), .row-form-errors {
+    background: #f2f2f2;
+}
+
+tr:nth-child(even), tr:nth-child(even) .errorlist, tr:nth-child(odd) + .row-form-errors, tr:nth-child(odd) + .row-form-errors .errorlist {
+    background: #fff;
+}
+
+td, th {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.quiet, a.quiet:link, a.quiet:visited {
+    color: #212529 !important;
+}

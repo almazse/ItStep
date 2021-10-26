@@ -76,9 +76,10 @@ product_id INT REFERENCES product(id),
 price FLOAT NOT NULL
 )"""
 
-
 cursor.execute(order)
 cursor.close(order)
+
+
 connection.commit()
 
 cursor.close()

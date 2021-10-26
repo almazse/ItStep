@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% if post.publish_date %}
+        <article class="blog-post">
+            <h2 class="blog-post-title">{{ post.title }}</h2>
+            <p class="blog-post-meta">{{ post.publish_date|date:"M d, Y" }} by <a href="#">Mark</a></p>
+            <a href="{% url 'post_edit'  pk=post.pk%}"><i class="fas fa-edit"></i></a>
+            <a href="{% url 'post_delete'  pk=post.pk%}"><i class="fas fa-trash-alt"></i></a>
+            {% if post.image %}
+            <img class="img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
+            {% endif %}
+            <p>{{ post.text }}</p>
+
+        </article>
+    {% endif %}
+{% endblock %}
