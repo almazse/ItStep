@@ -10,6 +10,7 @@
     <div class="container">
         {% if cart %}
         <h1>Shopping cart</h1>
+
         <table class="cart table">
             <thead>
                 <tr>
@@ -24,6 +25,7 @@
             <tbody>
                 {% for item in cart %}
                     {% with product=item.product %}
+
                 <tr>
                     <td>
                         <img src="{% if product.main_photo %}{{ product.main_photo.url }}{% else %}{% static 'img/placeholder-image.png' %}{% endif %}" alt="{{ product.name }}" width="100">
@@ -31,8 +33,9 @@
                     <td>{{ product.name }}</td>
                     <td>
                       <form action="{% url 'cart:cart_add' product.id %}" method="post">
-                        {{ item.update_quantity_form.quantity }}
-                        {{ item.update_quantity_form.update }}
+                            {{ item.update_quantity_form.quantity }}
+
+                          <input type="hidden" name="product-id" value="{{ product.id }}">
                         <input type="submit" value="Update">
                         {% csrf_token %}
                       </form>
@@ -50,13 +53,13 @@
                 <tr>
                     <th>Total</th>
                     <th colspan="4"></th>
-                    <th>${{ cart.get_total_price }}</th>
+                    <th>${{ total }}</th>
                 </tr>
             </tfoot>
         </table>
         <p>
             <a href="{% url 'shop:store' %}" class="btn btn-primary">Continue shopping</a>
-            <a href="{% url 'shop:checkout' %}" class="btn btn-success">Checkout</a>
+            <a href="{% url 'cart:cart_checkout' %}" class="btn btn-success">Checkout</a>
         </p>
         {% else %}
         <h1>Cart is empty</h1>

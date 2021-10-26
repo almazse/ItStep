@@ -12,7 +12,11 @@
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
 						<li style="color:white;">
-							<a href="{% url 'authentication:login' %}"><i class="fa fa-user-o"></i> {% if user.get_username %}{{ user.get_username }}{% else %}Login{% endif %}</a>
+							{% if user.get_username %}
+							<a href="{% url 'authentication:user' %}"><i class="fa fa-user-o"></i>{{ user.get_username }}</a>
+							{% else %}
+							<a href="{% url 'authentication:login' %}"><i class="fa fa-user-o"></i>Login</a>
+							{% endif %}
 							{% if not user.get_username %} / <a href="{% url 'authentication:signin' %}">Sign in</a>{% endif %}
 						</li>
 					</ul>
@@ -94,11 +98,11 @@
 										</div>
 										<div class="cart-summary">
 											<small>{{ widget_cart_count }} Item(s) selected</small>
-											<h5>SUBTOTAL: ${{ widget_cart.get_total_price }}</h5>
+											<h5>SUBTOTAL: ${{ widget_cart_total }}</h5>
 										</div>
 										<div class="cart-btns">
 											<a href="{% url 'cart:cart_detail' %}">View Cart</a>
-											<a href="{% url 'shop:checkout' %}">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+											<a href="{% url 'cart:cart_checkout' %}">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
 

@@ -13,64 +13,22 @@
 				<div class="row">
 					<!-- ASIDE -->
 					<div id="aside" class="col-md-3">
+						<form action="" method="post">
+							{% csrf_token %}
 						<!-- aside Widget -->
 						<div class="aside">
 							<h3 class="aside-title">Categories</h3>
 							<div class="checkbox-filter">
-
+								{% for category_item in categories %}
 								<div class="input-checkbox">
-									<input type="checkbox" id="category-1">
-									<label for="category-1">
+									<input type="checkbox" id="category-{{ category_item.id }}" name="category-{{ category_item.id }}" {% if category_item.id in category_id_list %}checked{% endif %}>
+									<label for="category-{{ category_item.id }}">
 										<span></span>
-										Laptops
+										{{ category_item.name }}
 										<small>(120)</small>
 									</label>
 								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-2">
-									<label for="category-2">
-										<span></span>
-										Smartphones
-										<small>(740)</small>
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-3">
-									<label for="category-3">
-										<span></span>
-										Cameras
-										<small>(1450)</small>
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-4">
-									<label for="category-4">
-										<span></span>
-										Accessories
-										<small>(578)</small>
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-5">
-									<label for="category-5">
-										<span></span>
-										Laptops
-										<small>(120)</small>
-									</label>
-								</div>
-
-								<div class="input-checkbox">
-									<input type="checkbox" id="category-6">
-									<label for="category-6">
-										<span></span>
-										Smartphones
-										<small>(740)</small>
-									</label>
-								</div>
+								{% endfor %}
 							</div>
 						</div>
 						<!-- /aside Widget -->
@@ -150,7 +108,8 @@
 							</div>
 						</div>
 						<!-- /aside Widget -->
-
+							<input type="submit" value="filter" class="primary-btn cta-btn">
+						</form>
 						<!-- aside Widget -->
 						<div class="aside">
 							<h3 class="aside-title">Top selling</h3>
@@ -188,6 +147,7 @@
 							</div>
 						</div>
 						<!-- /aside Widget -->
+
 					</div>
 					<!-- /ASIDE -->
 
@@ -233,7 +193,7 @@
 										</div>
 									</div>
 									<div class="product-body">
-										<p class="product-category">{{product.category}}</p>
+										<p class="product-category"><a href="{% url 'shop:store' category_slug=product.category.slug %}">{{ product.category }}</a></p>
 										<h3 class="product-name"><a href="{% url 'shop:product' pk=product.pk %}">{{product.name}}</a></h3>
 										<h4 class="product-price">{{product.price}} {% if product.old_price %}<del class="product-old-price">{{ product.old_price }}</del>{% endif %}</h4>
 										<div class="product-rating">
@@ -254,8 +214,8 @@
 									</style>
 									<div class="add-to-cart">
 										<form action="{% url 'cart:cart_add' product.id %}" method="POST">
-											{{ cart_product_form }}
 											{% csrf_token %}
+											<input type="hidden" name="product-id" value="{{ product.id }}">
 											<button type="submit" class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 										</form>
 

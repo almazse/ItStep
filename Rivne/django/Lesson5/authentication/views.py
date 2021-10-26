@@ -4,7 +4,8 @@ from .forms import UserLoginForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.contrib import messages
-
+from .models import Profile
+from cart.models import Order, OrderItem
 
 
 def user_login(request):
@@ -47,22 +48,36 @@ def sign_in(request):
         user.first_name = first_name
         user.last_name = last_name
 
-        # user.profile.city = city
-        # user.profile.phone = phone
+        Profile.objects.create(user=user, city=city, phone=phone)
 
         group = Group.objects.get(name='customers')
         group.user_set.add(user)
+
         user.save()
 
-        # user = authenticate(username=username, password=password)
-        # if user is not None:
-        #     if user.is_active:
-        #         login(request, user)
-        #         messages.success(request, "Authenticated successful!")
-        #         return redirect("/")
-        #     else:
-        #         return HttpResponse('User blocked!')
-        # else:
-        #     return HttpResponse('Authenticated blocked!')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                messages.success(request, "Authenticated successful!")
+                return redirect("/")
+            else:
+                return HttpResponse('User blocked!')
+        else:
+            return HttpResponse('Authenticated blocked!')
 
     return render(request, 'signin.html')
+
+
+def user_page(request):
+    if request.user.is_authenticated:
+        orders = Order.objects.filter(author=request.user)
+        items_in_order = {}
+        for order in orders:
+            items_order = OrderItem.objects.filter(order=order)
+            for item in items_order:
+                items_in_order[order.id] = {"product": item.product, "price": item.price}
+
+        return render(request, 'user.html', {'orders': orders, "items": items_in_order})
+    else:
+        return redirect("/")

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} - Login{% endblock %}
+
+
+{% block container %}
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        {% if user.is_authenticated %}
+        <h1>Hello, {{ user.get_username }}</h1>
+        <a>User: {{ user.get_username }} </a>
+        <a class="btn btn-sm btn-outline-secondary" style="margin-left: 10px;" href="{% url 'authentication:logout'%}">Logout</a>
+
+        <table class="table">
+            <tr>
+                <th>Number order</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>email</th>
+                <th>address</th>
+                <th>Zip code</th>
+                <th>city</th>
+                <th>country</th>
+                <th>Telephone</th>
+                <th>paid</th>
+                <th>Date of order</th>
+            </tr>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.first_name }}</td>
+                <td>{{ order.last_name }}</td>
+                <td>{{ order.email }}</td>
+                <td>{{ order.address }}</td>
+                <td>{{ order.zip_code }}</td>
+                <td>{{ order.city }}</td>
+                <td>{{ order.country }}</td>
+                <td>{{ order.tel }}</td>
+                <td>{{ order.paid }}</td>
+                <td>{{ order.created }}</td>
+            </tr>
+            <tr>
+                <td colspan="11">
+                    <table>
+                    {{ items }}
+                    {% for item in items %}
+                        {{ item[0] }}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                        </tr>
+
+                    {% endfor %}
+                    </table>
+                </td>
+            </tr>
+
+        {% endfor %}
+        </table>
+        </tr>
+        {% endif %}
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+{% endblock %}
