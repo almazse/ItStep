@@ -72,12 +72,12 @@ def sign_in(request):
 def user_page(request):
     if request.user.is_authenticated:
         orders = Order.objects.filter(author=request.user)
-        items_in_order = {}
+        items = []
         for order in orders:
             items_order = OrderItem.objects.filter(order=order)
             for item in items_order:
-                items_in_order[order.id] = {"product": item.product, "price": item.price}
+                items.append({"order_id": order.id, "product": item.product, "price": item.price, "quantity": item.quantity})
 
-        return render(request, 'user.html', {'orders': orders, "items": items_in_order})
+        return render(request, 'user.html', {'orders': orders, "items": items})
     else:
         return redirect("/")

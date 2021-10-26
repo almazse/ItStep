@@ -11,9 +11,7 @@
     <div class="container">
         {% if user.is_authenticated %}
         <h1>Hello, {{ user.get_username }}</h1>
-        <a>User: {{ user.get_username }} </a>
-        <a class="btn btn-sm btn-outline-secondary" style="margin-left: 10px;" href="{% url 'authentication:logout'%}">Logout</a>
-
+		<h2>My orders</h2>
         <table class="table">
             <tr>
                 <th>Number order</th>
@@ -44,14 +42,20 @@
             </tr>
             <tr>
                 <td colspan="11">
-                    <table>
-                    {{ items }}
-                    {% for item in items %}
-                        {{ item[0] }}
-                        <tr>
-                            <td>{{ item.id }}</td>
+                    <table class="table table-striped table-dark">
+						<tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Qantity</th>
                         </tr>
-
+                    {% for item in items %}
+						{% if item.order_id == order.id %}
+						<tr>
+                            <td>{{ item.product }}</td>
+                            <td>{{ item.price }}</td>
+                            <td>{{ item.quantity }}</td>
+                        </tr>
+						{% endif %}
                     {% endfor %}
                     </table>
                 </td>
@@ -60,7 +64,9 @@
         {% endfor %}
         </table>
         </tr>
+		<a class="btn btn-sm btn-outline-secondary" style="margin-left: 10px;" href="{% url 'authentication:logout'%}">Logout</a>
         {% endif %}
+
     </div>
     <!-- /container -->
 </div>
