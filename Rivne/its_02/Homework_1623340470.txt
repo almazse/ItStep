@@ -1,0 +1,7 @@
+API https://api.covid19api.com/summary
+
+---������� ����
+1. Show COVID19 information
+2. Sort by new confirmed
+3. �������� �������� ���������� �� ���� ����� ("Country")
+4. Show global information

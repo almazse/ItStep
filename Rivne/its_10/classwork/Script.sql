@@ -11,7 +11,21 @@
 --where extract (month from date_of_birth) =
 --extract(month from now())
 
-select first_name, last_name from employee e
-where id in 
-(select employee_id from orders o where city_id in
-(select id from city c where c.city_name = 'Madrid')) 
+--select first_name, last_name from employee e
+--where id in 
+--(select employee_id from orders o where city_id in
+--(select id from city c where c.city_name = 'Madrid')) 
+
+--homework
+--select first_name, last_name
+--from employee e 
+--where city_id in
+--(select id from city c where c.city_name = 'London')
+
+--select first_name, last_name from employee e
+--where first_name like 'Z%'
+
+--select first_name, last_name from employee e 
+--where date_part('year', now()) - date_part('year', date_of_birth) > 50
+--order by last_name 
+
